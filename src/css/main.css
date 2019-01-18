@@ -1,0 +1,191 @@
+.centered {
+    display: flex;
+    justify-content: center;
+}
+#layout{
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {width: 100%}
+#pagetitle {
+    color: white;
+    background-color: #00345e;
+}
+#Zusammenfassung {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: #6EAF32;
+    z-index: 5;
+}
+#Zusammenfassung > h4 {margin: 1em;}
+
+#messages {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    z-index: 10;
+}
+#messages > div {
+    color: #8a6d3b;
+    text-align: center;
+    background-color: #fcf8e3;
+    padding: 15px;
+    margin: auto auto 10px;
+    border: 1px solid #faebcc;
+    border-radius: 4px;
+}
+
+#controls {
+    flex-direction: column;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.acc-head {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 0;
+}
+.acc-body {
+    display: none;
+    padding: 0 1em;
+    border-bottom: 1px solid #e5e5e5;
+}
+.advice {font-size: small;}
+.acc-body .pure-button-primary {
+    background-color: #30648e;
+}
+
+/*#Black { background: black }
+#Purple { background: purple }
+#DarkViolet { background: darkviolet }
+#DodgerBlue { background: dodgerblue }
+#Teal { background: teal}
+#Green { background: green}
+#Orange { background: orange }
+#OrangeRed { background: orangered}
+#Crimson { background: crimson }
+#FireBrick { background: firebrick }*/
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-bottom: 1em;
+}
+.column {
+    flex: 45%;
+    min-width: 480px;
+    max-width: 45%;
+    padding: 0 4px;
+}
+.column table {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+@media (max-width: 1000px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 4px;
+    }
+    /*.column {
+        flex: 100%;
+        max-width: 100%;
+    }*/
+}
+
+#content caption {
+    font-size: larger;
+    font-style: normal;
+    margin-top: 24px;
+    padding: 0;
+    vertical-align: bottom;
+    color: #00345e;
+}
+#content thead {
+    background-color: #6EAF32;
+}
+
+#content button {
+    background-color: transparent;
+    border: none;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#content button:hover {
+    background-color: rgba(200,200,200,0.5);
+}
+caption button {
+    position: relative;
+    bottom: 5px;
+}
+.loeschButton {
+    color: red;
+    float: right;
+}
+.loeschAllButton {
+    color: red;
+    float: left;
+}
+.fertigButton {
+    color: green;
+    float: right;
+}
+.aenderButton {
+    color: #00345e;
+    float: right;
+}
+.kursAendern,
+.kursAendern:focus {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    max-width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
